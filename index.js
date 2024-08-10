@@ -10,11 +10,9 @@ title: 'What shape would you like to draw?',
 type: 'list',
 name: 'shape',
 choices: ['Square', 'Circle', 'Triangle']
-}, {    
-    type: 'input',
-    name: 'name',
-    message: 'What is your name?'
-        },{
+},
+
+{
         title: 'What should be the size of the shape?',
         type: 'number',
         name: 'size',
@@ -60,21 +58,10 @@ choices: ['Square', 'Circle', 'Triangle']
     ])
     
 
-    
-
-
-
-
 
     
-    .then((answers) => {
-        // Handle user input
-        console.log(answers)
-    }
-    )
-    .catch((error) => {
-        // Handle errors
-        console.log(error)
-    }
-    );
+
+
+
+
 
