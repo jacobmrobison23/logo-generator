@@ -8,7 +8,7 @@
   - [Usage](#usage)
   - [contact-me](#contact-me)
   ## Description
-  Logo generator for small business to avoid cost of a graphic designer
+  Logo generator for small businesses to avoid cost of a graphic designer
   ## Requirements
   node and java
   ## Usage
