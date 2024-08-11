@@ -8,7 +8,9 @@ const generateShape = require("./utils/generateShape");
 
 
 
-  const questions = [
+  inquirer.prompt([
+
+
     {
       title: "What shape would you like to draw?",
       type: "list",
@@ -63,16 +65,23 @@ const generateShape = require("./utils/generateShape");
       name: "textColor",
       default: "black",
     },
-  ];
-
-function init() {
-  inquirer.prompt(questions).then((answers) => {
+  ]).then((answers) => {
     const shape = generateShape(answers);
-    const filePath = path.resolve(__dirname, "shape.html");
-    fs.writeFileSync(filePath, shape)
-    console.log("Shape generated at", filePath);
+    const filePath = path.join(__dirname, "output", "shape.html");
+    fs.writeFileSync(filePath, shape);
+    console.log(`Shape created at ${filePath}`);
   }
-    );
-}
 
-init();
+  )
+
+  .catch((error) => {
+    console.error(error);
+  });
+
+
+
+
+
+
+
+  
